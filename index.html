@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;1,700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-on-surface": "#233143", "on-primary-container": "#5c0008", "inverse-surface": "#d4e4fa", "error": "#ffb4ab", "outline-variant": "#5b403e", "on-secondary-fixed": "#002109", "surface-tint": "#ffb3ad", "secondary-fixed": "#6bff8f", "primary-fixed-dim": "#ffb3ad", "on-primary-fixed-variant": "#930013", "on-secondary-fixed-variant": "#005321", "surface-container-high": "#1c2b3c", "surface-container-low": "#0d1c2d", "surface-variant": "#273647", "tertiary-container": "#8990a8", "on-primary": "#68000a", "on-error-container": "#ffdad6", "tertiary-fixed": "#dae2fd", "error-container": "#93000a", "surface-bright": "#2c3a4c", "surface-container": "#122131", "on-tertiary": "#283044", "inverse-primary": "#b91a24", "secondary-fixed-dim": "#4ae176", "secondary": "#4ae176", "on-surface-variant": "#e4beba", "tertiary-fixed-dim": "#bec6e0", "on-tertiary-container": "#22293d", "background": "#051424", "primary-container": "#ff5451", "surface": "#051424", "on-tertiary-fixed": "#131b2e", "surface-container-lowest": "#010f1f", "tertiary": "#bec6e0", "surface-container-highest": "#273647", "primary-fixed": "#ffdad7", "on-surface": "#d4e4fa", "primary": "#ffb3ad", "on-tertiary-fixed-variant": "#3f465c", "on-secondary": "#003915", "surface-dim": "#051424", "on-secondary-container": "#004119", "secondary-container": "#00b954", "on-error": "#690005", "on-background": "#d4e4fa", "on-primary-fixed": "#410004", "outline": "#ab8986" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "space-xl": "2.5rem", "space-md": "1rem", "gutter": "1rem", "margin": "1rem", "margin-desktop": "2rem", "gutter-desktop": "1.5rem", "space-sm": "0.5rem", "space-lg": "1.5rem" }, "fontFamily": { "body-lg": ["Inter"], "headline-md": ["Barlow Condensed"], "label-md": ["Barlow Condensed"], "display-xl-mobile": ["Barlow Condensed"], "display-xl": ["Barlow Condensed"], "label-sm": ["Barlow Condensed"], "headline-lg": ["Barlow Condensed"], "headline-sm": ["Barlow Condensed"], "metric-num": ["Barlow Condensed"], "body-md": ["Inter"], "body-sm": ["Inter"], "headline-lg-mobile": ["Barlow Condensed"] }, "fontSize": { "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "28px", "letterSpacing": "0.02em", "fontWeight": "600" }], "label-md": ["14px", { "lineHeight": "18px", "letterSpacing": "0.06em", "fontWeight": "600" }], "display-xl-mobile": ["40px", { "lineHeight": "44px", "letterSpacing": "0.02em", "fontWeight": "800" }], "display-xl": ["56px", { "lineHeight": "60px", "letterSpacing": "0.02em", "fontWeight": "800" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700" }], "headline-lg": ["36px", { "lineHeight": "40px", "letterSpacing": "0.01em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "600" }], "metric-num": ["32px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-lg-mobile": ["28px", { "lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "700" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.45)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="CreaseLive Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDNcaA70Y0oVDHeAPLKHLfmgHJ7dyprccP64bDtsFPXpshr-1dgy-Vnbp8FNE6nuuHhekEcNqULbJXlHkEB57jgc54eCUDiy7jCD6q_i8Pz8qd0iB3YkD7NuFj1aYa_-wcSoiggWv3e1kkILgBahxyH8QaBEDxTnv9MMUbHRCmkc2NLlrQQXR0CMPqsQgzST7za7SIfUdHrPsGffT_Lg98DA2KHJ_53RCQlrdL7cngYAA"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm uppercase tracking-wider text-on-surface leading-none">CREASE<span class="text-secondary">LIVE</span></span><span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant truncate max-w-[120px]">Home</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Search matches and teams" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/60 transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/60 transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></button><a class="w-11 h-11 flex items-center justify-center" data-path="more-news" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-secondary/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJwOhEocuIKp6_OqyUutJXcqOL61AqBzPtf4AfUqroyBVW5SWc1axjpyiFIEKF_VIxAUld4EYZt4K9AzpovPOXKcMxjzPKYP53p8Q0HTBdo2wkmqfnorfBXKvjyKg6Mz8rW9JGmXjmdwWQqrYGSH9wA17HSY7Mx3i2bqPuA8PJyJhCgPW7TTI1fACbxLcQ1jmn0dGD3P0f5IlDPmrmNyoagwyXnZxGzi5mchW9TLoH"/></a></div></div><div class="flex items-center gap-space-sm px-margin pb-space-sm overflow-x-auto scrollbar-none text-nowrap"><a class="px-space-sm py-1 rounded-full bg-surface-container-highest text-on-surface font-label-md text-label-md tracking-wider uppercase" data-path="home" href="#">Home</a><a class="px-space-sm py-1 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md tracking-wider uppercase flex items-center gap-1.5" data-path="live-matches" href="#"><span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>Scores</a><a class="px-space-sm py-1 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md tracking-wider uppercase" data-path="matches" href="#">Matches</a><a class="px-space-sm py-1 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md tracking-wider uppercase" data-path="teams" href="#">Teams</a><a class="px-space-sm py-1 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md tracking-wider uppercase" data-path="rankings" href="#">Rankings</a><a class="px-space-sm py-1 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md tracking-wider uppercase" data-path="more-news" href="#">News</a></div></header><main class="flex-1 flex flex-col relative w-full pt-28 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full pb-8">
+<!-- Sticky Sub-Nav Filter Chips -->
+<div class="sticky top-0 z-30 w-full bg-surface-container-lowest/90 backdrop-blur-md py-2.5 px-margin mb-3">
+<div class="flex items-center gap-space-xs overflow-x-auto scrollbar-none">
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-highest text-on-surface font-label-md text-label-md tracking-wider uppercase shrink-0 transition-transform active:scale-95">All</button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md tracking-wider uppercase shrink-0 flex items-center gap-1.5 transition-transform active:scale-95">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+        Live (3)
+      </button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md tracking-wider uppercase shrink-0 transition-transform active:scale-95">Upcoming</button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md tracking-wider uppercase shrink-0 transition-transform active:scale-95">T20 World Cup</button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md tracking-wider uppercase shrink-0 transition-transform active:scale-95">IPL 2025</button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md tracking-wider uppercase shrink-0 transition-transform active:scale-95">WTC</button>
+</div>
+</div>
+<div class="px-margin flex flex-col gap-space-lg">
+<!-- Featured Live Match Bento Card -->
+<div class="relative w-full rounded-2xl bg-surface-container p-space-md overflow-hidden shadow-xl">
+<!-- Glow ambient accent -->
+<div class="absolute -top-12 -right-12 w-40 h-40 bg-primary-container/15 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Top Meta Banner -->
+<div class="flex items-center justify-between gap-2 mb-3">
+<div class="flex items-center gap-2 min-w-0">
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm uppercase flex items-center gap-1.5 shrink-0 tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary animate-ping"></span>
+            LIVE
+          </span>
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider truncate">ICC Men's T20 World Cup • Final</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary font-medium shrink-0">Over 18.2</span>
+</div>
+<!-- Teams & Scores -->
+<div class="flex flex-col gap-3 my-2">
+<!-- Team Australia (1st Innings) -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden">
+<span class="font-headline-sm text-headline-sm text-on-surface">🇦🇺</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface tracking-wide">Australia</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">20.0 ov</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-metric-num text-metric-num text-on-surface">178<span class="text-on-surface-variant text-xl">/7</span></span>
+</div>
+</div>
+<!-- Team India (Batting / Chasing) -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden">
+<span class="font-headline-sm text-headline-sm text-on-surface">🇮🇳</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface font-bold tracking-wide">India</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary font-medium">Target 179 • Needs 5 off 10</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-metric-num text-metric-num text-secondary font-bold">184<span class="text-secondary/70 text-xl">/4</span></span>
+</div>
+</div>
+</div>
+<!-- Match Equations Rate Shelf -->
+<div class="grid grid-cols-2 gap-2 my-3 p-2.5 rounded-xl bg-surface-container-low">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Current Run Rate</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">CRR 10.03</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Required Run Rate</span>
+<span class="font-headline-sm text-headline-sm text-secondary">RRR 3.82</span>
+</div>
+</div>
+<!-- Batter & Bowler Live Stats -->
+<div class="flex flex-col gap-1.5 my-3 text-body-sm font-body-sm">
+<div class="flex items-center justify-between text-on-surface py-1">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-medium">V. Kohli*</span>
+<span class="text-on-surface-variant">c &amp; b in action</span>
+</div>
+<span class="font-semibold tracking-wide">68* <span class="text-on-surface-variant font-normal">(42b, 6x4, 3x6)</span></span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant py-0.5">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-transparent"></span>
+<span>M. Starc</span>
+<span>(Bowler)</span>
+</div>
+<span class="text-on-surface font-medium">1/36 <span class="text-on-surface-variant font-normal">(3.2 ov)</span></span>
+</div>
+</div>
+<!-- Mini Over Timeline Tracker -->
+<div class="flex items-center justify-between pt-2 mb-4">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">This Over (18)</span>
+<div class="flex items-center gap-1.5">
+<!-- Dot ball -->
+<div class="w-7 h-7 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface font-label-md text-label-md">1</div>
+<!-- Four -->
+<div class="w-7 h-7 rounded-full bg-secondary-container/20 text-secondary font-label-md text-label-md flex items-center justify-center font-bold">4</div>
+<!-- Dot -->
+<div class="w-7 h-7 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant font-label-md text-label-md">0</div>
+<!-- Six -->
+<div class="w-7 h-7 rounded-full bg-secondary text-on-secondary font-label-md text-label-md flex items-center justify-center font-bold">6</div>
+<!-- 2 runs -->
+<div class="w-7 h-7 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface font-label-md text-label-md">2</div>
+<!-- Wicket -->
+<div class="w-7 h-7 rounded-full bg-primary-container text-on-primary font-label-md text-label-md flex items-center justify-center font-bold">W</div>
+</div>
+</div>
+<!-- Action Button -->
+<a class="w-full py-3 rounded-xl bg-primary-container text-on-primary font-headline-sm text-headline-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg active:scale-[0.98] transition-all" data-path="live-matches" href="#">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+        Watch Live • Match Center
+      </a>
+</div>
+<!-- Match Carousel: Upcoming & Today's Matches -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">calendar_month</span>
+<span class="font-headline-sm text-headline-sm uppercase tracking-wider text-on-surface">Upcoming Matches</span>
+</div>
+<a class="font-label-md text-label-md uppercase text-secondary tracking-wider" data-path="matches" href="#">View All</a>
+</div>
+<!-- Horizontal Cards Scroller -->
+<div class="flex gap-space-sm overflow-x-auto scrollbar-none pb-2 -mx-margin px-margin" style="scroll-snap-type: x mandatory;">
+<!-- Card 1 -->
+<div class="min-w-[260px] max-w-[260px] rounded-2xl bg-surface-container p-space-sm flex flex-col justify-between shrink-0 shadow-md" style="scroll-snap-align: start;">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wide">Today • 18:30 GMT</span>
+<button aria-label="Set Reminder" class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-secondary active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[18px]">notifications</span>
+</button>
+</div>
+<div class="flex items-center justify-between py-2">
+<div class="flex items-center gap-2">
+<span class="text-xl">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span>
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface">ENG</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">vs</span>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface">SA</span>
+<span class="text-xl">🇿🇦</span>
+</div>
+</div>
+<div class="mt-2 pt-2 border-none bg-surface-container-low p-2 rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span class="font-body-sm text-body-sm truncate max-w-[120px]">Lord's, London</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase">Starts in 3h</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="min-w-[260px] max-w-[260px] rounded-2xl bg-surface-container p-space-sm flex flex-col justify-between shrink-0 shadow-md" style="scroll-snap-align: start;">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wide">Tomorrow • 14:00</span>
+<button aria-label="Set Reminder" class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-secondary active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[18px]">notifications</span>
+</button>
+</div>
+<div class="flex items-center justify-between py-2">
+<div class="flex items-center gap-2">
+<span class="text-xl">🇵🇰</span>
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface">PAK</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">vs</span>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface">NZ</span>
+<span class="text-xl">🇳🇿</span>
+</div>
+</div>
+<div class="mt-2 pt-2 border-none bg-surface-container-low p-2 rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span class="font-body-sm text-body-sm truncate max-w-[120px]">Gaddafi Stadium</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase">T20 Series</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="min-w-[260px] max-w-[260px] rounded-2xl bg-surface-container p-space-sm flex flex-col justify-between shrink-0 shadow-md" style="scroll-snap-align: start;">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wide">Friday • 19:00</span>
+<button aria-label="Set Reminder" class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-secondary active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[18px]">notifications</span>
+</button>
+</div>
+<div class="flex items-center justify-between py-2">
+<div class="flex items-center gap-2">
+<span class="text-xl">🌴</span>
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface">WI</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">vs</span>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface">SL</span>
+<span class="text-xl">🇱🇰</span>
+</div>
+</div>
+<div class="mt-2 pt-2 border-none bg-surface-container-low p-2 rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span class="font-body-sm text-body-sm truncate max-w-[120px]">Kensington Oval</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase">ODI Cup</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Tournament Standings Preview (Group 1) -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">format_list_numbered</span>
+<span class="font-headline-sm text-headline-sm uppercase tracking-wider text-on-surface">Points Table Preview</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Group 1</span>
+</div>
+<div class="w-full bg-surface-container rounded-2xl overflow-hidden shadow-md">
+<!-- Table Header -->
+<div class="grid grid-cols-12 gap-1 py-2.5 px-3 bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<div class="col-span-1 text-center">#</div>
+<div class="col-span-5">Team</div>
+<div class="col-span-2 text-center">M</div>
+<div class="col-span-2 text-right">NRR</div>
+<div class="col-span-2 text-right">Pts</div>
+</div>
+<!-- Table Row 1 (Qualified) -->
+<div class="grid grid-cols-12 gap-1 py-3 px-3 items-center bg-surface-container/60 hover:bg-surface-container-high transition-colors">
+<div class="col-span-1 flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-secondary mr-1"></span>
+<span class="font-label-md text-label-md text-on-surface">1</span>
+</div>
+<div class="col-span-5 flex items-center gap-2 min-w-0">
+<span class="text-base">🇮🇳</span>
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface truncate">India</span>
+</div>
+<div class="col-span-2 text-center font-body-sm text-body-sm text-on-surface">5</div>
+<div class="col-span-2 text-right font-body-sm text-body-sm text-secondary font-mono">+1.240</div>
+<div class="col-span-2 text-right font-headline-sm text-headline-sm text-secondary font-bold">10</div>
+</div>
+<!-- Table Row 2 (Qualified) -->
+<div class="grid grid-cols-12 gap-1 py-3 px-3 items-center bg-surface-container-low/40 hover:bg-surface-container-high transition-colors">
+<div class="col-span-1 flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-secondary mr-1"></span>
+<span class="font-label-md text-label-md text-on-surface">2</span>
+</div>
+<div class="col-span-5 flex items-center gap-2 min-w-0">
+<span class="text-base">🇦🇺</span>
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface truncate">Australia</span>
+</div>
+<div class="col-span-2 text-center font-body-sm text-body-sm text-on-surface">5</div>
+<div class="col-span-2 text-right font-body-sm text-body-sm text-on-surface font-mono">+0.892</div>
+<div class="col-span-2 text-right font-headline-sm text-headline-sm text-on-surface font-bold">8</div>
+</div>
+<!-- Table Row 3 -->
+<div class="grid grid-cols-12 gap-1 py-3 px-3 items-center bg-surface-container/60 hover:bg-surface-container-high transition-colors">
+<div class="col-span-1 flex items-center justify-center">
+<span class="font-label-md text-label-md text-on-surface-variant">3</span>
+</div>
+<div class="col-span-5 flex items-center gap-2 min-w-0">
+<span class="text-base">🇿🇦</span>
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface-variant truncate">South Africa</span>
+</div>
+<div class="col-span-2 text-center font-body-sm text-body-sm text-on-surface">5</div>
+<div class="col-span-2 text-right font-body-sm text-body-sm text-on-surface-variant font-mono">+0.120</div>
+<div class="col-span-2 text-right font-headline-sm text-headline-sm text-on-surface-variant font-bold">6</div>
+</div>
+<!-- Table Row 4 -->
+<div class="grid grid-cols-12 gap-1 py-3 px-3 items-center bg-surface-container-low/40 hover:bg-surface-container-high transition-colors">
+<div class="col-span-1 flex items-center justify-center">
+<span class="font-label-md text-label-md text-on-surface-variant">4</span>
+</div>
+<div class="col-span-5 flex items-center gap-2 min-w-0">
+<span class="text-base">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span>
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface-variant truncate">England</span>
+</div>
+<div class="col-span-2 text-center font-body-sm text-body-sm text-on-surface">5</div>
+<div class="col-span-2 text-right font-body-sm text-body-sm text-primary font-mono">-0.450</div>
+<div class="col-span-2 text-right font-headline-sm text-headline-sm text-on-surface-variant font-bold">4</div>
+</div>
+</div>
+<div class="flex items-center gap-2 px-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Top 2 advance to the semi-finals</span>
+</div>
+</div>
+<!-- Top Trending Players -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">trending_up</span>
+<span class="font-headline-sm text-headline-sm uppercase tracking-wider text-on-surface">Form Tracker: Trending Stars</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Player 1 -->
+<div class="bg-surface-container rounded-2xl p-space-sm flex flex-col gap-2 shadow-md relative overflow-hidden">
+<div class="flex items-center gap-space-sm">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Athletic portrait of an international male cricket batter wearing navy blue kit and helmet, intense confident expression, floodlit stadium backdrop, sharp lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvcCxJwxSawJ1BdQLRE4WkRSJtyEkvRyhCJpc8cg7wO_pwB2G0Nrv5r3uL6uY2PFxFNlmZop3wafwgsA7RV1RoXl7Sr36AUFVIz_n0xXt8wXO9z1tBL0XowDUhi6vme2Caa7ZWGJziYHqnWs_pUJRpHT47WfK17m8gNl7IRUUOsNtO56jDBz-ocdF5XeRkra4FjYCZM3JeMGSRE0Q4Oze-df2klnvE3_eTICW6tD8d"/>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface uppercase truncate">V. Kohli</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Batter • IND</span>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-2 flex justify-between items-center text-center">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Runs</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">342</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">SR</span>
+<span class="font-headline-sm text-headline-sm text-secondary">154.2</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">50s</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">4</span>
+</div>
+</div>
+</div>
+<!-- Player 2 -->
+<div class="bg-surface-container rounded-2xl p-space-sm flex flex-col gap-2 shadow-md relative overflow-hidden">
+<div class="flex items-center gap-space-sm">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Aggressive portrait of an international fast bowler releasing a red leather cricket ball under bright stadium floodlights, sweat flying, athletic dark sports background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHXtRBc-J9WMEfLc0uSvq1BBg47SllZWzyNlJaPYnhYGRNWGY5od3ruVncT4asDvoCirWmFz3kL2iO34-kBzE3W3f1Gn-EvpiadgxbrR66H5KiylSED1Iw3kPAc1rdLWQTFsz3iPSE7nn7gY8A8S8XFLNtXazdpQUd00FZy3UpoysgGy556gHf1L1gAffcwx1pBQ53Ybnak0kL_hkLX_q9Muj6_8SkOmKYbFy4TiAo"/>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface uppercase truncate">J. Bumrah</span>
+<span class="font-label-sm text-label-sm text-primary uppercase font-semibold">Bowler • IND</span>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-2 flex justify-between items-center text-center">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Wkts</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">15</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Econ</span>
+<span class="font-headline-sm text-headline-sm text-secondary">5.24</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">BBI</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">4/12</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Cricket Pulse: Latest News & Insights -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">newspaper</span>
+<span class="font-headline-sm text-headline-sm uppercase tracking-wider text-on-surface">Latest News &amp; Editorials</span>
+</div>
+<a class="font-label-md text-label-md uppercase text-secondary tracking-wider" data-path="more-news" href="#">All News</a>
+</div>
+<!-- Featured Big News Card -->
+<div class="w-full rounded-2xl bg-surface-container overflow-hidden shadow-lg flex flex-col group">
+<div class="relative w-full h-44">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Action cricket photograph of a fast bowler celebrating a bowled wicket during a thrilling night match under bright stadium lights with crowd roaring in background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDroS8aAU_RO91uFhwzE4GRP0TXaBQZwtW5tq6JEXB8fcnSSeh8htMbvnXznXbNBCrIVuJnLoeWrs7yAANRzwsDRvlhME38FIIKrR6nfbdyjBG9cxO0j10vSYUx-tn2_TYQKmg7GcvPlcYo5HUAp8CVLTCpAfbskoXfHmwlCv5wyDwju6H3sUQOCLbHUycIUWh0d4BAJ3dgZ_ELdLs10rQvk10_IYw2jAsiTJsnoHgi"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+<span class="absolute top-3 left-3 px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm uppercase tracking-wider">
+            Match Report
+          </span>
+<span class="absolute bottom-2 left-3 font-label-sm text-label-sm uppercase text-secondary tracking-wider font-semibold">
+            15m ago • MCG Melbourne
+          </span>
+</div>
+<div class="p-space-md flex flex-col gap-1.5">
+<span class="font-headline-md text-headline-md text-on-surface leading-tight">Sensational death-over bowling secures thriller win at Melbourne</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">A gripping final over masterclass left fans breathless as Australia held their nerves against a fierce counter-attack.</p>
+</div>
+</div>
+<!-- Secondary News List Items -->
+<div class="flex flex-col gap-2">
+<div class="w-full rounded-2xl bg-surface-container p-space-sm flex items-center gap-space-sm shadow-md">
+<img class="w-20 h-20 rounded-xl object-cover shrink-0" data-alt="Close-up press conference shot of an international cricket captain speaking into microphones with sponsor backdrops and serious athletic focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4jAXHhl0hijMmdv01iAo15n9EEGeKpEPpBlJUTX_px6nb1GQdL1BopYtQA6q43MfLG-HVYIbjHvW8tmPSe_n1t0aXQkWyQJTDW5RHiOH78GOcA-DX94jvfv05T0JcohPAJLijdmTiJCaAygwF4ccKEnOpC28uZlaqxGo56c8IQGeO7yyZAD_IBirxIJCjxHOcFtiDz1cM-lEJt-D3EAoufBr50wmJCMYa6xol25a4"/>
+<div class="flex flex-col min-w-0 justify-center">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Press Room • 1h ago</span>
+<span class="font-headline-sm text-headline-sm text-on-surface line-clamp-2 leading-snug">Captain press conference: "Pressure is a privilege ahead of the semifinal"</span>
+</div>
+</div>
+<div class="w-full rounded-2xl bg-surface-container p-space-sm flex items-center gap-space-sm shadow-md">
+<img class="w-20 h-20 rounded-xl object-cover shrink-0" data-alt="Cricket medical physio examining the wrist of a spin bowler on the training pitch during net practice, dramatic morning sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaDp_eWTrHJJAG9J7eXjtjGVJLd1Jd2Hv7EHVj6QJU7pdi11exKEo_2oCk7zzrUEvgJBTeXNEwZSHc9I5ISz_FseJYi2Zj8vE7QFhfwLb3-yEPJASHi_EO2q6JLyfHpxySiRB9uSeBjmdavMM2_3XrZbef7L9NJbmPr3jepiSx7eLMdqF-3MNGyav2yWu2gU7SOPcgX0ug-qLhjIad8suEkG8q_hE_7iV3sbU1kzp9"/>
+<div class="flex flex-col min-w-0 justify-center">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Injury Update • 3h ago</span>
+<span class="font-headline-sm text-headline-sm text-on-surface line-clamp-2 leading-snug">Lead spinner cleared for high-stakes clash following fitness test</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Fan Zone: Daily Poll & Engagement -->
+<div class="w-full rounded-2xl bg-surface-container p-space-md shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-secondary tracking-widest font-bold">Daily Fan Poll</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">42,810 Votes</span>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface leading-snug">Who will lift the ICC T20 World Cup Trophy?</span>
+<!-- Interactive poll choices -->
+<div class="flex flex-col gap-2 mt-1" id="fan-poll-container">
+<button class="w-full relative rounded-xl bg-surface-container-low p-3 text-left overflow-hidden group active:scale-[0.99] transition-transform" onclick="castVote(this, 68)">
+<div class="absolute inset-0 bg-secondary/15 w-[68%] transition-all duration-700"></div>
+<div class="relative z-10 flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface uppercase">India</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">68%</span>
+</div>
+</button>
+<button class="w-full relative rounded-xl bg-surface-container-low p-3 text-left overflow-hidden group active:scale-[0.99] transition-transform" onclick="castVote(this, 32)">
+<div class="absolute inset-0 bg-surface-container-highest/60 w-[32%] transition-all duration-700"></div>
+<div class="relative z-10 flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface uppercase">Australia</span>
+<span class="font-headline-sm text-headline-sm text-on-surface-variant font-bold">32%</span>
+</div>
+</button>
+</div>
+</div>
+<!-- Quick Newsletter & Community Card -->
+<div class="w-full rounded-2xl bg-surface-container p-space-md flex flex-col gap-3 shadow-md relative overflow-hidden">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[24px]">electric_bolt</span>
+<span class="font-headline-md text-headline-md uppercase text-on-surface tracking-wide">CreaseLive Morning Over</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Get the daily 2-minute over-by-over tactical cricket recap and pitch reports delivered straight to your inbox.</p>
+<div class="flex items-center gap-2 mt-1">
+<input class="flex-1 bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm px-3.5 py-3 rounded-xl focus:outline-none focus:ring-1 focus:ring-secondary" placeholder="Enter your email address..." type="email"/>
+<button class="bg-secondary text-on-secondary px-space-md py-3 rounded-xl font-headline-sm text-headline-sm uppercase tracking-wider active:scale-95 transition-transform shrink-0">
+          Join
+        </button>
+</div>
+<!-- Quick Social Icons -->
+<div class="flex items-center justify-between pt-3 mt-1 border-t border-transparent text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Join 1.2M+ Cricket Fans</span>
+<div class="flex items-center gap-3">
+<a aria-label="Social Link" class="text-on-surface-variant hover:text-secondary" href="#"><span class="material-symbols-outlined text-[18px]">share</span></a>
+<a aria-label="Audio Feed" class="text-on-surface-variant hover:text-secondary" href="#"><span class="material-symbols-outlined text-[18px]">podcasts</span></a>
+<a aria-label="Community Forum" class="text-on-surface-variant hover:text-secondary" href="#"><span class="material-symbols-outlined text-[18px]">forum</span></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function castVote(button, pct) {
+    const parent = button.parentElement;
+    const buttons = parent.querySelectorAll('button');
+    buttons.forEach(btn => {
+      btn.classList.add('opacity-90');
+    });
+    button.classList.add('ring-1', 'ring-secondary');
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-4px_24px_rgba(0,0,0,0.55)]" data-active-classes="text-secondary"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center flex-1 h-full py-1 transition-colors text-secondary" data-path="home" href="#"><span class="material-symbols-outlined text-[24px]">stadium</span><span class="font-label-sm text-label-sm uppercase tracking-wider mt-0.5">Home</span></a><a class="relative flex flex-col items-center justify-center flex-1 h-full py-1 text-on-surface-variant transition-colors hover:text-on-surface" data-path="live-matches" href="#"><span class="relative flex"><span class="material-symbols-outlined text-[24px]">sports_cricket</span><span class="absolute -top-1 -right-1 flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary-container"></span></span></span><span class="font-label-sm text-label-sm uppercase tracking-wider mt-0.5">Live</span></a><a class="flex flex-col items-center justify-center flex-1 h-full py-1 text-on-surface-variant transition-colors hover:text-on-surface" data-path="rankings" href="#"><span class="material-symbols-outlined text-[24px]">leaderboard</span><span class="font-label-sm text-label-sm uppercase tracking-wider mt-0.5">Rankings</span></a><a class="flex flex-col items-center justify-center flex-1 h-full py-1 text-on-surface-variant transition-colors hover:text-on-surface" data-path="teams" href="#"><span class="material-symbols-outlined text-[24px]">groups</span><span class="font-label-sm text-label-sm uppercase tracking-wider mt-0.5">Teams</span></a><a class="flex flex-col items-center justify-center flex-1 h-full py-1 text-on-surface-variant transition-colors hover:text-on-surface" data-path="more-news" href="#"><span class="material-symbols-outlined text-[24px]">feed</span><span class="font-label-sm text-label-sm uppercase tracking-wider mt-0.5">More</span></a></div></nav></body></html>
